@@ -1,0 +1,42 @@
+﻿@model Toko_Olahraga.Models.Transaksi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaksi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tanggal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tanggal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Keterangan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Keterangan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdBarangNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdBarangNavigation.IdBarang)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPembeliNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdPembeliNavigation.IdPembeli)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdTransaksi">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

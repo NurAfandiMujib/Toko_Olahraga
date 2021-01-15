@@ -1,0 +1,36 @@
+﻿@model Toko_Olahraga.Models.StaffGudang
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StaffGudang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaStaff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoTlp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoTlp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdStaff">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
